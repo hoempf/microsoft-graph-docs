@@ -58,8 +58,8 @@ POST /users/{id|userPrincipalName}/translateExchangeIds
 
 The binary formats (`entryId` and `immutableEntryId`) are URL-safe base64 encoded. URL-safeness is implemented by modifying the base64 encoding of the binary data in the following way:
 
-- Replace `+` with `-`
-- Replace `/` with `_`
+- Replace `+` with `_`
+- Replace `/` with `-`
 - Remove any trailing padding characters (`=`)
 - Add an integer to the end of the string indicating how many padding characters were in the original (`0`, `1`, or `2`)
 
